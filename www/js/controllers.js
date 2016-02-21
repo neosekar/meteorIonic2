@@ -25,6 +25,7 @@ angular
 			}
 		  
      		$scope.doFacebookLogin=function(){
+				console.log("service config",Accounts.loginServicesConfigured());
 				Meteor.loginWithFacebook({requestPermissions: ['user', 'public_repo'],loginStyle:"popup"},this.$bindToContext((err) => {
 					if (err){
 						console.log("facebook login",err);
